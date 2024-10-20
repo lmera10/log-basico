@@ -20,7 +20,7 @@ button.addEventListener('click', (e) => {
     login(data);
 });
 function login(data) {
-    fetch('https://example.com/login', {  // Reemplaza por tu URL del backend
+    fetch('http://localhost:8080/', { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -38,7 +38,7 @@ function login(data) {
         if (result.success) {
             alert('Login exitoso');
             // Redirigir al usuario a otra página
-            window.location.href = '/home';  // Cambia esta URL a la página que desees
+            window.location.href = "navigation.html";  // Cambia esta URL a la página que desees
         } else {
             alert('Nombre de usuario o contraseña incorrectos');
         }
@@ -51,7 +51,7 @@ function login(data) {
 function login(data) {
     // Simulación de una respuesta del servidor
     const mockResponse = {
-        success: data.username === 'admin' && data.password === '1234',  // Verificar usuario/contraseña
+        success: data.username === 'admin' && data.password === '12345',  // Verificar usuario/contraseña
         message: data.username === 'admin' ? 'Login exitoso' : 'Credenciales incorrectas'
     };
 
@@ -59,7 +59,7 @@ function login(data) {
     setTimeout(() => {
         if (mockResponse.success) {
             alert(mockResponse.message);
-            window.location.href = '/home';  // Simular una redirección tras el login
+            window.location.href = "navigation.html";  // Simular una redirección tras el login
         } else {
             alert(mockResponse.message);
         }

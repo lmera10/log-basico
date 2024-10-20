@@ -66,3 +66,67 @@ form button {
     cursor: pointer;
     font-size: 20px;
 }
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para la barra de navegación */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    position: fixed;        /* Fijar el menú en la parte superior */
+    top: 0;                 /* Pegar el menú a la parte superior de la página */
+    left: 0;
+    width: 100%;            /* Hacer que la barra de navegación ocupe todo el ancho */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido dentro del header */
+    z-index: 1000;          /* Asegurar que el menú siempre esté por encima del contenido */
+}
+
+/* Estilos para el contenedor del menú */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;           /* Flexbox para alinear los elementos del menú en fila */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
+    text-decoration: underline;
+}
+
+/* Agregar margen superior al contenido principal para evitar que quede oculto debajo del menú */
+main {
+    padding: 20px;
+    margin-top: 80px; /* Ajusta este valor dependiendo de la altura del menú */
+    text-align: center;
+}
+
+main h1 {
+    font-size: 5em;
+    color: #f8f4f4;
+}
+
+main p {
+    font-size: 1.2em;
+    color: #0f0e0e;
+}
+
